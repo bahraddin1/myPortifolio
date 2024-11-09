@@ -1,0 +1,128 @@
+
+
+@media (max-width:991px){
+    .nav-bar{
+
+        .manu-btn{
+            display: flex;
+            z-index: 999;
+        }
+
+        .manu{
+            position: fixed;
+            left: -100%;
+            top: 80px;
+            display: flex;
+            flex-direction: column;
+            background-color:var(--main-color);
+            align-items: center;
+            width: 100%;
+            transition: all .5s ease;
+            box-shadow: 0 10px 27px rgba(0, 0, 0, .3);
+
+            &.active{
+                left: 0;
+            }
+
+            .nav-item{
+                display: inline-block;
+                margin: 6px 0;
+
+            }
+        }
+
+        &.sticky{
+
+            .manu{
+                background-color: var(--white);
+                top: 55px;
+            }
+            .manu-btn{
+                background-color:var(--white);
+                box-shadow: var(--shadow-black-100);
+
+                div{
+                    background-color:var(--main-color);
+                }
+            }
+        }
+    }
+
+    .home-section{
+
+        .home-text, .home-image{
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .home-image{
+            display: flex;
+            justify-content: center;
+
+            .image-box{
+                margin-top: 30px;
+            }
+        }
+
+        .header-social{
+            display: block;
+            left: 90%;
+        }
+
+        .header-hero-shape{
+            display: none;
+        }
+    }
+
+    .about-section{
+        .about-image{
+            display: none;
+        }
+
+        .about-content{
+            flex: 0 0 75%;
+            max-width: 75%;
+
+            .section-title{
+                text-align: center;
+            }
+        }
+    }
+
+    .service-section .service-item,
+    .certificate-section .certificate-item,
+    .project .project-item{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width:1300px) {
+    .header-social{
+        left: 10px;
+    }
+}
+
+@media (max-width:1300px) and (min-width:991px){
+    .header-social{
+        display: none;
+    }
+}
+
+@media (max-width:767px){
+    .service-section .service-item,
+    .contact-section .contact-item,
+    .contact-section .contact-form .half,
+    .about-section .about-content,
+    .certificate-section .certificate-item,
+    .faq-section .faq-item,
+    .project .project-item{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .header-social
+    {
+        left: 85%;
+    }
+}
